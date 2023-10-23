@@ -9,6 +9,8 @@
     "pg": "^8.11.3"
   },
   "scripts": {
-    "start": "nodemon -r dotenv/config server.js"
+    "start": "nodemon -r dotenv/config server.js",
+    "deploy": "node -r dotenv/config server.js",
+    "build": "cd front_end && npm run build"
   }
 }
