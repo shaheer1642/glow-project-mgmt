@@ -4,12 +4,8 @@ const cors = require('cors')
 const path = require('path')
 
 app.use(cors())
-app.get('/', (req, res) => {
-    res.send('Welcome to GLOW API!')
-})
 
 app.use('/api', require('./routes/reliefweb'))
-
 
 app.use(express.static(path.join(__dirname, 'front_end', 'build')))
 
