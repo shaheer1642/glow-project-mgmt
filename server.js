@@ -9,7 +9,7 @@ app.use('/api', require('./routes/reliefweb'))
 
 app.use(express.static(path.join(__dirname, 'front_end', 'dist')))
 
-app.get("/", (req, res) => {
+app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, 'front_end', 'dist', 'index.html'))
 });
 
