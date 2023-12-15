@@ -3,6 +3,7 @@ const router = express.Router()
 const passport = require('passport')
 const { body, param } = require('express-validator')
 const { json } = require('body-parser')
+const { db } = require('../modules/db')
 
 router.get('/reliefweb/projects', (req, res) => {
     fetch('https://api.reliefweb.int/v1/jobs?limit=30')

@@ -16,7 +16,7 @@ function Dashboard() {
                 const career_categories = payload.data.reduce((cats, p) => cats.concat(p.detail.fields.career_categories.map((cat => cat.name)).filter(cat => !cats.includes(cat))), [])
                 setCategories(career_categories)
                 setSelectedCategories(career_categories)
-            })
+            }).catch(console.error)
     }, [])
 
     const handleCategoryClick = (cat) => {

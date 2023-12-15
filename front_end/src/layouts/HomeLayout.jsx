@@ -16,7 +16,7 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { Outlet } from 'react-router-dom';
 import { Grid } from '@mui/material';
-import { Facebook, Twitter, LinkedIn, Instagram } from '@mui/icons-material';
+import { Facebook, Twitter, LinkedIn, Instagram, BorderAll } from '@mui/icons-material';
 
 const drawerWidth = 240;
 const navItems = ['Home', 'About', 'Contact', 'FAQS', 'Login'];
@@ -95,13 +95,13 @@ function HomeLayout(props) {
           </Drawer>
         </nav>
       </Grid>
-      <Grid container item xs={12}>
+      <Grid container item xs={12} justifyContent={'center'} display='flex' >
         <Toolbar />
-        <Outlet />
+        <Outlet  />
       </Grid>
-      <Grid container item xs={12} sx={{ bgcolor: 'primary.900' }} marginTop={'auto'} borderTop='3px solid black' gap={1}>
-        <Grid item xs={12} display='flex' justifyContent={'center'}>
-          <img src='/images/logo_dark.png' width={150} />
+      <Grid container item xs={12} sx={{ bgcolor: 'primary.900', boxShadow: 30 }} marginTop={'auto'}  gap={1}>
+        <Grid item xs={12} display='flex' justifyContent={'center'} padding={1} >
+          <img src='/images/logo_dark.png' width={80}  />
         </Grid>
         <Grid container item xs={12} display={'flex'} justifyContent={'center'} gap={5}>
           <Grid item xs={'auto'}>
@@ -132,8 +132,8 @@ function HomeLayout(props) {
           </Grid>
         </Grid>
         <Grid item xs={12} display='flex' justifyContent='center'>
-          <Typography color={'primary.contrastText'}>
-            © Copyright 2023-24, All Rights Reserved. Developed by Adila & Shaheer
+          <Typography color={'primary.contrastText'} fontSize={12}>
+            © GLOW 2023-24, All Rights Reserved. Developed by Adila & Shaheer
           </Typography>
         </Grid>
       </Grid>
